@@ -1,23 +1,20 @@
-# app/utils/decorators.py
-from flask import abort
+from functools import wraps
+from flask import request, jsonify
+
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        # Contoh logika validasi token
+        token = request.headers.get('x-access-token')
+        if not token:
+            return jsonify({'message': 'Token is missing!'}), 401
+        # Logika verifikasi token...
+        return f(*args, **kwargs)
+    return decorated
 
 def tenant_required(f):
-    """
-    Decorator to ensure that the current user has valid tenant information.
-    
-    Args:
-        f (function): The function to decorate.
-    
-    Returns:
-        function: The wrapped function with tenant validation.
-    
-    Functionality:
-        - Checks if the current user has a valid tenant ID.
-        - Raises a 403 error if the tenant ID is invalid.
-    """
-    def wrapper(*args, **kwargs):
-        current_user = kwargs.get('current_user')
-        if not current_user or not current_user.tenant_id:
-            abort(403, "Tenant access required")
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        # Contoh logika validasi tenant
         return f(*args, **kwargs)
-    return wrapper
+    return decorated
