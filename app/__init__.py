@@ -5,6 +5,7 @@ from flask_jwt_extended import JWTManager
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from flask_talisman import Talisman
+from mangum import Mangum
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -33,5 +34,6 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(motor_bp)
     app.register_blueprint(tenant_bp)
-    
+
+    handler = Mangum(app)
     return app
