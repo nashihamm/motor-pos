@@ -7,3 +7,5 @@ Flask-Cors
 Marshmallow
 Flask-Talisman
 psycopg2-binary
+mangum
+psycopg2-binary
