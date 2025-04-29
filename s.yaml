@@ -1,0 +1,34 @@
+edition: 1.0.0
+name: flask-app
+access: default
+
+services:
+  flask-service:
+    component: fc
+    props:
+      region: ap-southeast-3
+      service:
+        name: flask-service
+      function:
+        name: flask-function
+        runtime: python3
+        handler: index.handler
+        codeUri: ./
+        timeout: 30
+        memorySize: 128
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods: [GET, POST]
+function:
+  environmentVariables:
+    SECRET_KEY: OIoB_CA5gi4XNts6G7W-nK505_f5blu1HmoI9oQqdH0
+    JWT_SECRET_KEY: L1C8Fxs7tgTEPgejcZw2hMTvodBcBUS8Ex-UD3fcA46Bq7TZrCxwEOoFuzTMmf3TtDpW5ByyStMvQ75jlJyrFg
+    DATABASE_URL: postgresql://nashihamm:Ngipik_123@pgm-d9j94elv1jb5mq3rjo.pgsql.ap-southeast-5.rds.aliyuncs.com:5432/flask_app_first
+    # MAIL_SERVER: smtp.gmail.com
+    # MAIL_PORT: '587'
+    # MAIL_USE_TLS: 'true'
+    # MAIL_USERNAME: your-email@example.com
+    # MAIL_PASSWORD: your-email-password
