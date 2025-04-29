@@ -1,0 +1,41 @@
+{
+  "statefulConfig": {
+    "serviceName": "flask-service",
+    "description": "",
+    "role": "",
+    "logConfig": {
+      "project": "",
+      "logstore": "",
+      "enableRequestMetrics": false,
+      "enableInstanceMetrics": false,
+      "logBeginRule": "None"
+    },
+    "serviceId": "3f8e21ed-5f53-4999-ac5b-ddb19013cb7e",
+    "createdTime": "2025-04-29T13:22:00Z",
+    "lastModifiedTime": "2025-04-29T14:43:40Z",
+    "vpcConfig": {
+      "vpcId": "",
+      "vSwitchIds": [],
+      "securityGroupId": "",
+      "role": null,
+      "anytunnelViaENI": null
+    },
+    "internetAccess": true,
+    "nasConfig": {
+      "userId": -1,
+      "groupId": -1,
+      "mountPoints": []
+    },
+    "ossMountConfig": {
+      "mountPoints": []
+    },
+    "vendorConfig": null,
+    "tracingConfig": {
+      "type": null,
+      "params": null,
+      "jaegerConfig": null
+    },
+    "useSLRAuthentication": false,
+    "name": "flask-service"
+  }
+}

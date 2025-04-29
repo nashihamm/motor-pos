@@ -1,0 +1,44 @@
+{
+  "statefulConfig": {
+    "functionId": "2409bd48-bfaa-4f08-98c4-398d8cf273ea",
+    "functionName": "flask-function",
+    "description": "This is default function description by fc-deploy component",
+    "runtime": "python3",
+    "handler": "index.handler",
+    "timeout": 30,
+    "initializer": "",
+    "initializationTimeout": 3,
+    "codeSize": 17442311,
+    "codeChecksum": "9488249930335750079",
+    "memorySize": 128,
+    "gpuMemorySize": null,
+    "environmentVariables": {},
+    "createdTime": "2025-04-29T13:22:42Z",
+    "lastModifiedTime": "2025-04-29T14:43:40Z",
+    "instanceConcurrency": 1,
+    "instanceSoftConcurrency": null,
+    "customContainerConfig": null,
+    "caPort": null,
+    "instanceType": "e1",
+    "layers": null,
+    "layersArnV2": null,
+    "instanceLifecycleConfig": {
+      "preFreeze": {
+        "handler": "",
+        "timeout": 3,
+        "command": null
+      },
+      "preStop": {
+        "handler": "",
+        "timeout": 3,
+        "command": null
+      }
+    },
+    "customDNS": null,
+    "customRuntimeConfig": null,
+    "customHealthCheckConfig": null,
+    "sessionAffinity": null,
+    "initializerCommand": null,
+    "name": "flask-function"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "statefulConfig": {
+    "triggerName": "httpTrigger",
+    "description": "",
+    "triggerId": "e6df520f-0c77-4072-90f8-fe17aeba9807",
+    "sourceArn": null,
+    "triggerType": "http",
+    "invocationRole": null,
+    "qualifier": "LATEST",
+    "urlInternet": "https://flask-function-flask-service-trjjhjgbup.ap-southeast-3.fcapp.run",
+    "urlIntranet": "https://flask-function-flask-service-trjjhjgbup.ap-southeast-3-vpc.fcapp.run",
+    "triggerConfig": {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "authType": "anonymous",
+      "disableURLInternet": false
+    },
+    "createdTime": "2025-04-29T13:22:42Z",
+    "lastModifiedTime": "2025-04-29T14:43:40Z",
+    "status": null,
+    "targetArn": null,
+    "name": "httpTrigger"
+  }
+}

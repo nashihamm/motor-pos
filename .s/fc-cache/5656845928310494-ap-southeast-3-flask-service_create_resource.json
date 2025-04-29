@@ -1,0 +1,6 @@
+{
+  "serviceName": "flask-service",
+  "functionNames": [
+    "flask-service/flask-function"
+  ]
+}
